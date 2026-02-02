@@ -1,0 +1,214 @@
+/*
+========================================
+CSS Custom Properties (Base Theme)
+========================================
+*/
+:root {
+    /* Scrolled (solid) state colors */
+    --color-solid-bg: #ffffff;
+    --color-solid-text: #333333;
+    --color-solid-link: #666666;
+    --color-solid-shadow: rgba(0, 0, 0, 0.1);
+
+    /* Transparent state colors */
+    --color-transparent-text: #ffffff;
+    --color-transparent-shadow: rgba(0, 0, 0, 0.5);
+
+    --font-family-sans-serif: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --font-weight-bold: 600;
+    --navbar-height: 80px;
+    --container-width: 1200px;
+    --transition-speed: 0.4s;
+    --border-radius: 6px;
+}
+
+/*
+========================================
+Global Resets & Base Styles
+========================================
+*/
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-family-sans-serif); }
+ul { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; transition: color var(--transition-speed) ease; }
+
+/*
+========================================
+Hero & Content Sections
+========================================
+*/
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    color: var(--color-transparent-text);
+    text-align: center;
+    background-image: url('src/Images/Laguna.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.hero-section h1 { font-size: 3rem; text-shadow: 0 2px 4px var(--color-transparent-shadow); }
+
+.content-section{
+    padding: 3rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/*
+========================================
+Navbar Structure & States
+========================================
+*/
+.navbar {
+    /* Starts fixed to the top */
+    position: fixed; top: 0; left: 0; width: 100%;
+    height: var(--navbar-height);
+    display: flex; align-items: center;
+    z-index: 1000;
+    
+    /* Initial (Transparent) State */
+    background-color: transparent;
+    color: var(--color-transparent-text);
+    box-shadow: none;
+
+    /* Properties to be animated */
+    transition: background-color var(--transition-speed) ease, 
+                box-shadow var(--transition-speed) ease;
+}
+
+.navbar__container {
+    display: flex; justify-content: space-between; align-items: center;
+    width: 100%; max-width: var(--container-width);
+    margin: 0 auto; padding: 0 1.5rem;
+}
+
+.navbar__brand,
+.navbar__link {
+    text-shadow: 0 1px 3px var(--color-transparent-shadow);
+    color: var(--color-transparent-text);
+    font-weight: var(--font-weight-bold);
+    transition: color var(--transition-speed) ease, text-shadow var(--transition-speed) ease;
+}
+
+.navbar__brand { font-size: 1.75rem; }
+.navbar__toggle .bar { background-color: var(--color-transparent-text); transition: background-color var(--transition-speed) ease; }
+
+/* Scrolled (Solid) State */
+.navbar.is-scrolled {
+    background-color: var(--color-solid-bg);
+    box-shadow: 0 2px 10px var(--color-solid-shadow);
+}
+
+.navbar.is-scrolled .navbar__brand,
+.navbar.is-scrolled .navbar__link {
+    color: var(--color-solid-text);
+    text-shadow: none;
+}
+
+.navbar.is-scrolled .navbar__link {
+        color: var(--color-solid-link);
+}
+
+.navbar.is-scrolled .navbar__brand { color: var(--color-solid-text); }
+.navbar.is-scrolled .navbar__toggle .bar { background-color: var(--color-solid-text); }
+.navbar.is-scrolled .navbar__link:hover { color: var(--color-solid-text); }
+
+/* Mobile Menu */
+.navbar__toggle { display: block; border: none; padding: 0.5rem; background: transparent; cursor: pointer; }
+.navbar__toggle .bar { display: block;  width: 25px; height: 3px; margin: 5px 0; border-radius: 2px; }
+
+.navbar__menu {
+    display: none; flex-direction: column; position: absolute; top: var(--navbar-height); left: 0;
+    width: 100%;
+    /* The mobile menu is always solid for readability */
+    background-color: var(--color-solid-bg);
+    box-shadow: 0 8px 16px var(--color-solid-shadow);
+}
+
+/* The mobile links are always in the 'solid' text color */
+.navbar__menu .navbar__link {
+    color: var(--color-solid-link); text-shadow: none;
+}
+
+.navbar__menu.is-active { display: flex; }
+.navbar__item { text-align: center; border-top: 1px solid var(--color-solid-shadow); }
+.navbar__item .navbar__link { display: block; padding: 1.25rem; }
+
+@media (min-width: 768px) {
+    .navbar__toggle { display: none; }
+    .navbar__menu { display: flex; flex-direction: row; align-items: center; position: static; width: auto; background: none; box-shadow: none; }
+    .navbar__list { display: flex; align-items: center; gap: 2rem; }
+    .navbar__item { border-top: none; }
+    .navbar__item .navbar__link { padding: 0.5rem 0; }
+}
+/* ================================
+   Descargas / Software Section
+================================ */
+
+#softwarePage {
+    margin-top: 4rem;
+}
+
+.softwareGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.softwareCard {
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.softwareCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+.softwareCard img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.softwareCard h3 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.softwareCard p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Download button */
+.downloadBtn {
+    display: inline-block;
+    padding: 0.7rem 1.6rem;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #2c7be5, #1a5dcc);
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.downloadBtn:hover {
+    background: linear-gradient(135deg, #1a5dcc, #124aa8);
+    transform: scale(1.05);
+}

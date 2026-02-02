@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georepo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar" id="main-navbar">
+        <div class="navbar__container">
+            <a href="#" class="navbar__brand">Georepo</a>
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle navigation">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav id="navbarMenu" class="navbar__menu" role="navigation">
+                <ul class="navbar__list">
+                    <li class="navbar__item"><a href="#" class="navbar__link">Home</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Contenido</a></li>
+                    <li class="navbar__item"><a href="#" class="navbar__link">Avisos</a></li>
+                    <li class="navbar__item"><a href="#softwarePageTitle" class="navbar__link">Software</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <h1>Repositorio de Geofísica</h1>
+        <a>Por y para los estudiantes</a>
+    </div>
+
+    <main class="content-section">
+        <h2>Bienvenido!!</h2>
+        <p>As you scroll down from the hero section, you will see the navigation bar above change from transparent to a solid white background with a shadow. This makes the navigation links clear and readable against this light-colored content area.</p>
+        <p>This effect is achieved by using JavaScript to add a special CSS class (e.g., 'is-scrolled') to the navbar element once the user has scrolled a certain distance down the page. The CSS then uses smooth transitions to animate the changes to properties like 'background-color' and 'color'.</p>
+        
+        <div id="softwarePage">
+            <h2 id="softwarePageTitle">Software libre</h2>
+
+            <div class="softwareGrid">
+
+                <div class="softwareCard">
+                    <img src="src/Images/qgis.png" alt="QGIS logo">
+                    <h3>QGIS</h3>
+                    <p>Sistema de Información Geográfica (SIG) libre y de código abierto para análisis y visualización de datos espaciales.</p>
+                    <a href="https://qgis.org/download/" target="_blank" class="downloadBtn">
+                        Descargar
+                    </a>
+                </div>
+
+                <div class="softwareCard">
+                    <img src="src/Images/ssap.png" alt="SSAP logo">
+                    <h3>SSAP</h3>
+                    <p>Software para procesamiento y análisis de datos sísmicos, ampliamente usado en docencia e investigación.</p>
+                    <a href="https://www.ssap.eu/downloads_en.html" target="_blank" class="downloadBtn">
+                        Descargar
+                    </a>
+                </div>
+
+                <div class="softwareCard">
+                    <img src="src/Images/ipi2win.png" alt="ipi2win logo">
+                    <h3>IPI2WIN</h3>
+                    <p>Software diseñado para la interpretación automática o semi-automática de datos de sondeo eléctrico vertical. .</p>
+                    <a href="http://geophys01.geol.msu.ru/ipi2win.htm" target="_blank" class="downloadBtn">
+                        Descargar
+                    </a>
+                </div>
+
+                <div class="softwareCard">
+                    <img src="src/Images/matlab.png" alt="ipi2win logo">
+                    <h3>MatLab</h3>
+                    <p>Software diseñado para la interpretación automática o semi-automática de datos de sondeo eléctrico vertical. .</p>
+                    <a href="https://www.mathworks.com/products/matlab.html" target="_blank" class="downloadBtn">
+                        Descargar
+                    </a>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+    
+    </main>
+    
+
+    <script src="script.js">
+    
+    </script>
+</body>
+</html>
+
