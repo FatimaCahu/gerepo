@@ -213,3 +213,7 @@ Navbar Structure & States
     background: linear-gradient(135deg, #1a5dcc, #124aa8);
     transform: scale(1.05);
 }
+
+.sectionTitle {
+    scroll-margin-top: var(--navbar-height);
+}
