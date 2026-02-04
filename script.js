@@ -27,8 +27,6 @@ class HeroCarousel {
         this.indicators = document.querySelectorAll('.indicator');
         this.prevBtn = document.querySelector('.prev-btn');
         this.nextBtn = document.querySelector('.next-btn');
-        this.playBtn = document.querySelector('.play-btn');
-        this.pauseBtn = document.querySelector('.pause-btn');
         
         this.currentSlide = 0;
         this.totalSlides = this.slides.length;
@@ -65,16 +63,6 @@ class HeroCarousel {
             });
         });
         
-        // Event listeners for play/pause
-        this.playBtn.addEventListener('click', () => {
-            this.startAutoplay();
-            this.togglePlayPause(true);
-        });
-        
-        this.pauseBtn.addEventListener('click', () => {
-            this.stopAutoplay();
-            this.togglePlayPause(false);
-        });
         
         // Pause on hover
         this.carousel.addEventListener('mouseenter', () => {

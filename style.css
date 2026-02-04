@@ -111,7 +111,7 @@ Navbar Structure & States
 }
 
 .navbar.is-scrolled .navbar__link {
-        color: var(--color-solid-link);
+        color: #000;
 }
 
 .navbar.is-scrolled .navbar__brand { color: var(--color-solid-text); }
