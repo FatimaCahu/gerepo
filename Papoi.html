@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Georepo</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
     
     <header class="navbar" id="main-navbar">
         <div class="navbar__container">
@@ -21,14 +22,69 @@
                     <li class="navbar__item"><a href="#" class="navbar__link">Contenido</a></li>
                     <li class="navbar__item"><a href="#" class="navbar__link">Avisos</a></li>
                     <li class="navbar__item"><a href="#softwarePageTitle" class="navbar__link">Software</a></li>
-
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="hero-section">
-        <h1>Repositorio de Geofísica</h1>
+    <!-- Hero Carousel Section -->
+    <div class="hero-carousel">
+        <!-- Slides Container -->
+        <div class="carousel-slides">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active">
+                <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="slide-content">
+                    <h1>Explora el Mundo de la Geofísica</h1>
+                    <p>Descubre las maravillas de nuestro planeta a través de la ciencia</p>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-slide">
+                <div class="slide-image" style="background-image: url('src/Images/Desierto.jpg');"></div>
+                <div class="slide-content">
+                    <h1>Investigación y Educación</h1>
+                    <p>Recursos académicos para estudiantes y profesionales</p>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-slide">
+                <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                <div class="slide-content">
+                    <h1>Tecnología Geocientífica</h1>
+                    <p>Software y herramientas para el análisis geofísico</p>
+                </div>
+            </div>
+            
+            <!-- Slide 4 (Your original image) -->
+            <div class="carousel-slide">
+                <div class="slide-image" style="background-image: url('src/Images/Laguna.jpg');"></div>
+                <div class="slide-content">
+                    <h1>Comunidad Académica</h1>
+                    <p>Colaboración entre docentes y alumnos</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-btn prev-btn" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn next-btn" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Indicators/Dots -->
+        <div class="carousel-indicators">
+            <button class="indicator active" aria-label="Go to slide 1"></button>
+            <button class="indicator" aria-label="Go to slide 2"></button>
+            <button class="indicator" aria-label="Go to slide 3"></button>
+            <button class="indicator" aria-label="Go to slide 4"></button>
+        </div>
+        
+        
     </div>
 
     <main class="content-section">
@@ -89,19 +145,10 @@
                         Descargar
                     </a>
                 </div>
-
-                
-
             </div>
         </div>
-
-    
     </main>
     
-
-    <script src="script.js">
-    
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
